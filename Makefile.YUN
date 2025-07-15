@@ -32,21 +32,27 @@ clean:
 	rm -rf dist/*
 	
 install: dev
-	mkdir -p /d/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep && \
-	cp -f ./dist/obsidian-ydcpub-dep/main.js /d/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep/main.js && \
-	cp -f ./dist/obsidian-ydcpub-dep/manifest.json /d/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep/manifest.json && \
-	cp -f ./dist/obsidian-ydcpub-dep/styles.css  /d/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep/styles.css
+	mkdir -p /g/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep && \
+	cp -f ./dist/obsidian-ydcpub-dep/main.js /g/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep/main.js && \
+	cp -f ./dist/obsidian-ydcpub-dep/manifest.json /g/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep/manifest.json && \
+	cp -f ./dist/obsidian-ydcpub-dep/styles.css  /g/obsidianVaults/build_dev_new/.obsidian/plugins/obsidian-ydcpub-dep/styles.css
 
 install-1: dev
-	mkdir -p /d/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep && \
-	cp -f ./dist/obsidian-ydcpub-dep/main.js /d/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep/main.js && \
-	cp -f ./dist/obsidian-ydcpub-dep/manifest.json /d/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep/manifest.json && \
-	cp -f ./dist/obsidian-ydcpub-dep/styles.css  /d/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep/styles.css
+	mkdir -p /g/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep && \
+	cp -f ./dist/obsidian-ydcpub-dep/main.js /g/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep/main.js && \
+	cp -f ./dist/obsidian-ydcpub-dep/manifest.json /g/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep/manifest.json && \
+	cp -f ./dist/obsidian-ydcpub-dep/styles.css  /g/obsidianVaults/build_dev/.obsidian/plugins/obsidian-ydcpub-dep/styles.css
 
 install-back: dev
-	mkdir -p /d/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep && \
-	cp -f ./dist/obsidian-ydcpub-dep/main.js /d/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep/main.js && \
-	cp -f ./dist/obsidian-ydcpub-dep/manifest.json /d/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep/manifest.json && \
-	cp -f ./dist/obsidian-ydcpub-dep/styles.css  /d/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep/styles.css
+	mkdir -p /g/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep && \
+	cp -f ./dist/obsidian-ydcpub-dep/main.js /g/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep/main.js && \
+	cp -f ./dist/obsidian-ydcpub-dep/manifest.json /g/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep/manifest.json && \
+	cp -f ./dist/obsidian-ydcpub-dep/styles.css  /g/obsidianVaults/pv_back_dev/.obsidian/plugins/obsidian-ydcpub-dep/styles.css
+
+install-2: dev
+	mkdir -p /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-dep && \
+	cp -f ./dist/obsidian-ydcpub-dep/main.js  /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-dep/main.js && \
+	cp -f ./dist/obsidian-ydcpub-dep/manifest.json  /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-dep/manifest.json
+	cp -f ./dist/obsidian-ydcpub-dep/styles.css  /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-dep/styles.css
 
 .PHONY: all changeLangFile dev build compress clean install install-1 install-back

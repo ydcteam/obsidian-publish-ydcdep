@@ -31,19 +31,19 @@ clean:
 	rm -rf dist/*
 	
 install: dev
-	mkdir -p /d/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas && \
-	cp -f ./dist/obsidian-ydcpub-saas/main.js  /d/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas/main.js && \
-	cp -f ./dist/obsidian-ydcpub-saas/manifest.json  /d/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas/manifest.json
-	cp -f ./dist/obsidian-ydcpub-saas/styles.css  /d/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas/styles.css
+	mkdir -p /g/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas && \
+	cp -f ./dist/obsidian-ydcpub-saas/main.js  /g/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas/main.js && \
+	cp -f ./dist/obsidian-ydcpub-saas/manifest.json  /g/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas/manifest.json
+	cp -f ./dist/obsidian-ydcpub-saas/styles.css  /g/obsidianVaults/plugin_dev_new/.obsidian/plugins/obsidian-ydcpub-saas/styles.css
 install-1: dev
-	mkdir -p /d/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas && \
-	cp -f ./dist/obsidian-ydcpub-saas/main.js  /d/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas/main.js && \
-	cp -f ./dist/obsidian-ydcpub-saas/manifest.json  /d/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas/manifest.json
-	cp -f ./dist/obsidian-ydcpub-saas/styles.css  /d/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas/styles.css
+	mkdir -p /g/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas && \
+	cp -f ./dist/obsidian-ydcpub-saas/main.js  /g/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas/main.js && \
+	cp -f ./dist/obsidian-ydcpub-saas/manifest.json  /g/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas/manifest.json
+	cp -f ./dist/obsidian-ydcpub-saas/styles.css  /g/obsidianVaults/plugin_dev/.obsidian/plugins/obsidian-ydcpub-saas/styles.css
 install-2: dev
-	mkdir -p /d/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas && \
-	cp -f ./dist/obsidian-ydcpub-saas/main.js  /d/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas/main.js && \
-	cp -f ./dist/obsidian-ydcpub-saas/manifest.json  /d/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas/manifest.json
-	cp -f ./dist/obsidian-ydcpub-saas/styles.css  /d/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas/styles.css
+	mkdir -p /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas && \
+	cp -f ./dist/obsidian-ydcpub-saas/main.js  /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas/main.js && \
+	cp -f ./dist/obsidian-ydcpub-saas/manifest.json  /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas/manifest.json
+	cp -f ./dist/obsidian-ydcpub-saas/styles.css  /g/obsidianVaults/niu_dev/.obsidian/plugins/obsidian-ydcpub-saas/styles.css
 
 .PHONY: all changeLangFile dev build compress clean install install-1 install-2
