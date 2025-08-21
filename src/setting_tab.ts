@@ -30,9 +30,9 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 		this.i18n = i18n;
 		this.HelpManual = {
 			helpText: this.t("manual_title"),
-			helpLink: "https://ydc.asia/docindex",
+			helpLink: "https://saas.ydc.pub/docs/saas_manual_ob",
 			homeText: this.t("manual_link_text"),
-			homeUrl: "https://doc.yidong.site",
+			homeUrl: "https://net.ydc.show",
 		};
 	}
 
@@ -48,10 +48,12 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 
 		containerEl.empty();
-
 		const mainDoc = containerEl.createDiv();
+
 		mainDoc.createEl("div", undefined, (div) => {
 			div.createEl("h3", { text: this.t("setting_main_title") });
+			div.createEl("hr");
+			div.createEl("h3", { text: this.t("platform_name") });
 		});
 
 		if (this.isSaaSMode()) {
@@ -77,26 +79,37 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 					let expireTimeStr = moment
 						.unix(this.plugin.settings.expireTime / 1000)
 						.format(this.t("plugin_lifetime_fmt_day"));
-					if (this.plugin.settings.remainingInDays <= 0) {
-						expireTimeStr = moment
-							.unix(this.plugin.settings.expireTime / 1000)
-							.format(this.t("plugin_lifetime_fmt_sec"));
-					}
-					const expireTimeTxt = this.t("plugin_lifetime", {
+					let remainingInDays = this.plugin.settings.remainingInDays;
+
+					let expireTimeTxt = this.t("platform_desc", {
 						remainingInDays: this.plugin.settings.remainingInDays,
 						expireTimeStr: expireTimeStr,
 					});
+					// 不足1天.
+					if (remainingInDays <= 0) {
+						expireTimeStr = moment
+							.unix(this.plugin.settings.expireTime / 1000)
+							.format(this.t("plugin_lifetime_fmt_sec"));
+						expireTimeTxt = this.t("platform_desc", {
+							remainingInDays:"不足1",
+							expireTimeStr: expireTimeStr,
+						});
+					}
 
-					div.createEl("h4", {
-						text: this.t("plugin_lifetime_title"),
-					});
-					div.createEl("h6", {
+					div.createEl("h3", {
 						text: expireTimeTxt,
 						cls: "appNotExpired",
 					});
 				});
 			}
+		} else {
+			mainDoc.createEl("div", undefined, (div) => { 
+				div.createEl("h3", {
+					text: this.t("platform_desc",),
+				});
+			});
 		}
+		mainDoc.createEl("hr");
 
 		mainDoc.createEl("h3", { text: this.t("setting_name") });
 		new Setting(mainDoc)
@@ -151,38 +164,23 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 					}),
 			);
 
-		if (this.isSaaSMode()) {
-			new Setting(mainDoc)
-				.setName(this.t("setting_yidong_saas_app_id"))
-				.setDesc(this.t("setting_yidong_saas_app_id_desc"))
-				.addText((text) =>
-					text
-						.setPlaceholder(this.t("setting_yidong_saas_app_id_place_holder"))
-						.setValue(this.plugin.settings.ydcAppId)
-						.onChange(async (value) => {
-							this.plugin.settings.ydcAppId = value.trim();
-							await this.plugin.saveSettings();
-						}),
-				);
-		}
-		
 		mainDoc.createEl("h3", { text: this.t("setting_extra_name") });
 
 		mainDoc.createEl("h4", {
 			text: this.t("setting_rename_auto_sync_main_title"),
 		});
 
-		new Setting(mainDoc)
-			.setName(this.t("setting_rename_auto_sync"))
-			.setDesc(this.t("setting_rename_auto_sync_desc"))
-			.addToggle((t) =>
-				t
-					.setValue(this.plugin.settings.autoSyncRename)
-					.onChange(async (value) => {
-						this.plugin.settings.autoSyncRename = value;
-						await this.plugin.saveSettings();
-					}),
-			);
+		// new Setting(mainDoc)
+		// 	.setName(this.t("setting_rename_auto_sync"))
+		// 	.setDesc(this.t("setting_rename_auto_sync_desc"))
+		// 	.addToggle((t) =>
+		// 		t
+		// 			.setValue(this.plugin.settings.autoSyncRename)
+		// 			.onChange(async (value) => {
+		// 				this.plugin.settings.autoSyncRename = value;
+		// 				await this.plugin.saveSettings();
+		// 			}),
+		// 	);
 		new Setting(mainDoc)
 			.setName(this.t("setting_rename_auto_sync_freq"))
 			.setDesc(this.t("setting_rename_auto_sync_freq_desc"))
@@ -202,17 +200,18 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 			text: this.t("setting_remove_auto_sync_main_title"),
 		});
 
-		new Setting(mainDoc)
-			.setName(this.t("setting_remove_auto_sync"))
-			.setDesc(this.t("setting_remove_auto_sync_desc"))
-			.addToggle((t) =>
-				t
-					.setValue(this.plugin.settings.autoSyncRemove)
-					.onChange(async (value) => {
-						this.plugin.settings.autoSyncRemove = value;
-						await this.plugin.saveSettings();
-					}),
-			);
+		// new Setting(mainDoc)
+		// 	.setName(this.t("setting_remove_auto_sync"))
+		// 	.setDesc(this.t("setting_remove_auto_sync_desc"))
+		// 	.addToggle((t) =>
+		// 		t
+		// 			.setValue(this.plugin.settings.autoSyncRemove)
+		// 			.onChange(async (value) => {
+		// 				this.plugin.settings.autoSyncRemove = value;
+		// 				await this.plugin.saveSettings();
+		// 			}),
+		// 	);
+
 		new Setting(mainDoc)
 			.setName(this.t("setting_remove_auto_sync_freq"))
 			.setDesc(this.t("setting_remove_auto_sync_freq_desc"))
@@ -259,14 +258,14 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 		s: string,
 		def: number = 3,
 		min: number = 1,
-		max: number = 10,
+		max: number = 600,
 	): number {
 		if (!/^\d+$/.test(s)) {
 			showNotice(this.t("warn_sync_freq_need_int"));
 			return def;
 		}
 		const interv = parseInt(s.trim());
-		if (interv < 0 || interv > 10) {
+		if (interv < 0 || interv > 600) {
 			showNotice(this.t("warn_sync_freq_range", { min: min, max: max }));
 			return def;
 		}

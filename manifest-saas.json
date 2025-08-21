@@ -1,10 +1,10 @@
 {
-	"id": "ydcpub-saas",
+	"id": "ydcpub",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"name": "YDC Publish SaaS",
-	"description": "一键发布笔记到【易东文档】SaaS平台生成文档型网站. Publish your notes to generate website on YDC SaaS.",
-	"author": "YDC 易东云网络",
-	"authorUrl": "https://doc.ydc.show",
+	"name": "YDC Publish",
+	"description": "一键发布笔记到【易东文档】平台生成文档型网站. Publish your notes to generate website on YDC.",
+	"author": "YDC 易东网络",
+	"authorUrl": "https://net.ydc.show",
 	"isDesktopOnly": false
 }

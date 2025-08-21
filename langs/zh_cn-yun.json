@@ -3,11 +3,13 @@
 	"disable": "关闭",
 	"enable": "开启",
 	"submit": "提交",
+	"platform_name": "独立部署平台",
+	"platform_desc": "适用于独立部署的图文系统和知识库系统",
 	"publish_doc": "发布文档 {{{docName}}} 中...",
 	"canceled_publish_doc": "文档 {{{docName}}} 取消发布",
-	"publish_all_docs": "易东云助理 - 全部发布",
-	"publish_path_docs": "全部发布到易东云助理",
-	"publish_one_doc": "发布到易东云助理",
+	"publish_all_docs": "易东平台 - 全部发布",
+	"publish_path_docs": "全部发布到易东平台",
+	"publish_one_doc": "发布到易东平台",
 	"publishing": "发布中...",
 	"publish_err": "文档发布失败",
 	"wait_for_publishing": "请等待之前的操作完成",
@@ -16,97 +18,76 @@
 	"start_all_publish": "开始批量发布仓库全部文档...",
 	"status_batch_publishing": "正在发布目录全部文档中...",
 	"status_all_publishing": "正在发布仓库全部文档中...",
-	"status_doc_rename_sync": "同步文档名称变更中...",
-	"status_doc_remove_sync": "同步文档删除操作中...",
+	"status_doc_rename_sync": "线上文档名称变更正在操作中...",
+	"status_doc_remove_sync": "线上文档删除正在操作中...",
 	"cancel_batch_publish": "取消目录全部发布",
 	"cancel_all_publish": "取消仓库全部发布",
-
-	"confirm_publish_path_docs": "是否发布该目录的全部文档到易东云助理?",
-	"confirm_publish_all_docs": "是否发布仓库的全部文档到易东云助理?",
-
-	"setting_main_title": "【易东云助理】文档发布平台",
+	"confirm_publish_path_docs": "是否发布该目录的全部文档到易东平台?",
+	"confirm_publish_all_docs": "是否发布仓库的全部文档到易东平台?",
+	"setting_main_title": "【YDC】易东平台文档同步",
 	"setting_name": "设置",
 	"setting_extra_name": "扩展设置",
-
-	"setting_yidong_account": "易东云助理账号",
-	"setting_yidong_account_desc": "易东云助理登录账号",
-	"setting_yidong_account_place_holder": "请输入易东云助理账号",
-
+	"setting_yidong_account": "平台账号",
+	"setting_yidong_account_desc": "易东平台账号，根据教程填写。",
+	"setting_yidong_account_place_holder": "请输入易东平台账号",
 	"setting_yidong_ob_publish_url": "发布地址",
-	"setting_yidong_ob_publish_url_desc": "从易东云助理会员中心获取到的Obsidian发布地址",
+	"setting_yidong_ob_publish_url_desc": "从易东平台获取到的Obsidian发布地址",
 	"setting_yidong_ob_publish_url_place_holder": "请输入地址",
-
 	"setting_yidong_api_key": "API Key",
 	"setting_yidong_api_key_desc": "用户认证KEY",
 	"setting_yidong_api_key_place_holder": "请输入认证KEY",
-
 	"setting_yidong_api_secret": "API Secret",
 	"setting_yidong_api_secret_desc": "用户认证密钥",
 	"setting_yidong_api_secret_place_holder": "请输入认证密钥",
-
-	"setting_yidong_saas_app_id": "易东文档应用客户端ID",
-	"setting_yidong_saas_app_id_desc": "从易东文档平台租户后台的应用中心获取到的客户端ID",
-	"setting_yidong_saas_app_id_place_holder": "输入应用ID",
-
+	"setting_yidong_saas_app_id": "应用客户端ID",
+	"setting_yidong_saas_app_id_desc": "易东SAAS平台的站点ID",
+	"setting_yidong_saas_app_id_place_holder": "输入平台站点ID",
 	"setting_rename_auto_sync_main_title": "重命名文档操作自动同步",
 	"setting_rename_auto_sync": "自动同步",
-	"setting_rename_auto_sync_desc": "是否自动同步文档标题的重命名操作到易东云助理，注意：启用后请重新启用插件才可生效。",
+	"setting_rename_auto_sync_desc": "是否自动同步文档标题的重命名操作到易东平台，注意：启用后请重新启用插件才可生效。",
 	"setting_rename_auto_sync_freq": "自动同步频率",
 	"setting_rename_auto_sync_freq_desc": "自动同步重命名文档的时间频率，单位秒，默认 3 秒一次，如果频繁需要重命名，可以调到 1 秒。",
-
 	"setting_remove_auto_sync_main_title": "删除文档操作自动同步",
 	"setting_remove_auto_sync": "自动同步",
-	"setting_remove_auto_sync_desc": "是否自动同步已发布文档的删除操作到易东云助理，注意：启用后请重新启用插件才可生效。",
+	"setting_remove_auto_sync_desc": "是否自动同步已发布文档的删除操作到易东平台，注意：启用后请重新启用插件才可生效。",
 	"setting_remove_auto_sync_freq": "自动同步频率",
 	"setting_remove_auto_sync_freq_desc": "自动同步文档删除操作的时间频率，单位秒，默认 3 秒一次，如果频繁需要删除，可以调到 1 秒。",
-
 	"setting_help_doc_main_title": "使用帮助",
 	"setting_help_doc_main_go_detail": "详情请阅读 - ",
-	"setting_help_doc_name": "使用手册",
-
+	"setting_help_doc_name": "Obsidian同步插件操作指南",
 	"warn_sync_freq_need_int": "同步频率配置需要是一个整数",
 	"warn_sync_freq_range": "自动同步频率配置值: {{min}}~{{max}}",
-
 	"err_chkPublished_failed": "查询文件发布状态失败",
 	"err_chkPublished_with_msg": "查询文件发布状态错误：{{msg}}",
-
 	"err_attachConf_failed": "获取文档附件配置错失败",
 	"err_attachConf_with_msg": "获取文档附件配置错误：{{msg}}",
-
 	"err_chkAttach_failed": "附件检查失败",
 	"err_chkAttach_with_msg": "附件检查错误：{{msg}}",
-
 	"sucs_publish": "文档 {{{docName}}} 发布成功",
 	"err_publish_failed": "文档 {{{docName}}} 发布失败",
 	"err_publish_with_msg": "文档 {{{docName}}} 发布失败：{{msg}}",
-
 	"sucs_rename": "文档 {{{docName}}} 改名成功",
 	"err_rename_failed": "文档 {{{docName}}} 改名失败",
 	"err_rename_with_msg": "文档 {{{docName}}} 改名失败：{{msg}}",
-
 	"sucs_remove": "文档 {{{docName}}} 删除成功",
 	"err_remove_failed": "文档 {{{docName}}} 删除失败",
 	"err_remove_with_msg": "文档 {{{docName}}} 删除失败：{{msg}}",
-
 	"err_no_attach_conf": "后台未配置附件上传",
 	"err_doc_attach_ref_invalid": "附件引用 {{msg}} 的所指向资源不存在，无法继续发布文档",
 	"err_attach_no_ext": "附件引用 {{msg}} 不支持没有扩展名的附件",
 	"err_attach_no_support": "不支持该附件类型：{{{filename}}} ",
 	"err_attach_oversize_skipped": "该附件类大小超过了限制，跳过：{{{filename}}}",
-
-	"manual_title": "极速搭建以内容为核心的文档型官网；编辑和发布分离，更少维护时间却更高效率；融合更多组件弹扩展功能；网页模版快速搭建页面，零基础用户也可高效维护；为用户带来更友好建站体验！",
-	"manual_link_text": "易东云助理官网",
-
+	"manual_title": "此OB插件用于将OBSIDIAN客户端的文档从电脑本地一键同步至易东线上平台，插件免费使用，需要配合易东平台使用。",
+	"manual_link_text": "易东网络官网",
 	"plugin_lifetime_title": "应用有效期",
 	"plugin_lifetime_fmt_day": "YYYY年MM月DD日",
 	"plugin_lifetime_fmt_sec": "YYYY年MM月DD日 HH:mm:ss",
 	"plugin_get_started": "要开始使用，请先填写下面的配置项目，然后重新启用本插件",
 	"plugin_lifetime": "有效期剩余{{{remainingInDays}}}天，将于 {{{expireTimeStr}}} 到期!",
-
+	"plugin_lifetime_less_than_1day": "有效期剩余不到1天，将于 {{{expireTimeStr}}} 到期!",
 	"plugin_expired": "插件过期，不可用! 请购买或续费!",
 	"plugin_not_available": "获取插件状态失败，插件将无法使用，请稍后重启客户端后重试!",
 	"plugin_not_purchase": "文档服务未购买或已过期，请稍购买/续费后重启客户端重试",
-
 	"req_err_expired": "请求失败，应用已过期或未购买",
 	"req_err_common": "请求失败"
 }

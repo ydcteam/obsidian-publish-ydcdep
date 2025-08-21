@@ -115,6 +115,16 @@ export class Http {
 			return null;
 		}
 
+		// TODO: test data.
+		return {
+			enable: true,
+			expireTime: 1765497600000,
+			remainingInDays: 120,
+			remainingInSeconds: 1765497600,
+		};
+
+
+
 		try {
 			const params: AuthParam = {
 				headers: {
@@ -641,34 +651,8 @@ export class Http {
 	};
 
 	chkRsp = (rsp: any): ChkRspResult => {
-
 		console.debug('chkRsp mode:', this.pluginMode);
-
-		// yun.
-		if (!this.isSaaSMode()) {
-			if (!rsp) {
-				throw new NetworkError("unexpected response data");
-			}
-			const data = rsp.data;
-			if (!data) {
-				throw new NetworkError("unexpected response data");
-			}
-			if (data.code != 1) {
-				return {
-					data: null,
-					code: 1,
-					msg: data.msg ?? this.t("req_err_common"),
-				};
-			}
-			const inData = data.data;
-			return {
-				data: inData,
-				code: 0,
-				msg: "ok",
-			};
-		}
-
-		// SaaS.
+		// YUN and NIU SAAS are the same.
 		if (!rsp) {
 			throw new NetworkError("unexpected response data");
 		}
@@ -676,33 +660,19 @@ export class Http {
 		if (!data) {
 			throw new NetworkError("unexpected response data");
 		}
-		if (data.code != 200) {
-			throw new NormalError(`请求失败：${data.msg}`);
-		}
-		const inData = data.data;
-		if (!inData) {
-			throw new NetworkError("unexpected response data");
-		}
-
-		if (inData.errcode != 0) {
-			if (inData.errcode == 10010) {
-				notify(undefined, this.t("req_err_expired"));
-			}
+		if (data.code != 1) {
 			return {
-				data: inData,
-				code: inData.errcode,
-				msg: data.msg ?? "N/A",
+				data: null,
+				code: 1,
+				msg: data.msg ?? this.t("req_err_common"),
 			};
 		}
-		const inInData = inData.data;
-		if (!inData) {
-			throw new NetworkError("unexpected response data");
-		}
-
+		const inData = data.data;
 		return {
-			data: inInData,
+			data: inData,
 			code: 0,
 			msg: "ok",
 		};
+
 	};
 } // End of class Http.

@@ -3,6 +3,8 @@
 	"disable": "Disable",
 	"enable": "Enable",
 	"submit": "Submit",
+	"platform_name": "图文系统平台",
+	"platform_desc": "适用于SAAS图文系统，有效期剩余天数{{{remainingInDays}}}天，将于 {{{expireTimeStr}}} 到期!",
 	"publish_doc": "Publishing note {{{docName}}} ...",
 	"canceled_publish_doc": "Note {{{docName}}} publish canceled",
 	"publish_all_docs": "Publish all vault notes to YiDong",
@@ -20,93 +22,72 @@
 	"status_doc_remove_sync": "Syncing note removal...",
 	"cancel_batch_publish": "Publish canceled.",
 	"cancel_all_publish": "Publish vault all notes canceled.",
-
 	"confirm_publish_path_docs": "Confirm to publish all notes to YiDong?",
 	"confirm_publish_all_docs": "Confirm to publish all vault notes to YiDong??",
-
 	"setting_main_title": "YiDong Note Publish Platform",
 	"setting_name": "Settings",
 	"setting_extra_name": "Advanced Settings",
-
 	"setting_yidong_account": "YiDong Account",
 	"setting_yidong_account_desc": "YiDong account",
 	"setting_yidong_account_place_holder": "Input YiDong account...",
-
 	"setting_yidong_ob_publish_url": "Service Endpoint",
 	"setting_yidong_ob_publish_url_desc": "Service endpoint from YiDong platform admin page.",
 	"setting_yidong_ob_publish_url_place_holder": "Input service endpoint...",
-
 	"setting_yidong_api_key": "Access Key",
 	"setting_yidong_api_key_desc": "Access key from YiDong platform admin page",
 	"setting_yidong_api_key_place_holder": "Input access key...",
-
 	"setting_yidong_api_secret": "Access Key Secret",
 	"setting_yidong_api_secret_desc": "Access key secret from YiDong platform admin page",
 	"setting_yidong_api_secret_place_holder": "Input access key secret...",
-
 	"setting_yidong_saas_app_id": "AppId",
 	"setting_yidong_saas_app_id_desc": "AppId from YDC SaaS",
 	"setting_yidong_saas_app_id_place_holder": "Input app id...",
-
 	"setting_rename_auto_sync_main_title": "Note Rename Auto-Sync Setting",
 	"setting_rename_auto_sync": "Auto Sync",
 	"setting_rename_auto_sync_desc": "Enable to auto sync note rename operation to YiDong platform. Note: You need to restart Obsidian when enable.",
 	"setting_rename_auto_sync_freq": "Auto Sync Frequency",
 	"setting_rename_auto_sync_freq_desc": "Config the auto-sync frequency in seconds. Minimum: 1 second. Default: Sync every 3 seconds. Set it to 1 second when you rename note frequently.",
-
 	"setting_remove_auto_sync_main_title": "Note Removal Auto-Sync Setting",
 	"setting_remove_auto_sync": "Auto Sync",
 	"setting_remove_auto_sync_desc": "Enable to auto sync note removal operation to YiDong platform. Note: You need to restart Obsidian when enable.",
 	"setting_remove_auto_sync_freq": "Auto Sync Frequency",
 	"setting_remove_auto_sync_freq_desc": "Config the auto-sync frequency in seconds. Minimum: 1 second. Default: Sync every 3 seconds. Set it to 1 second when you remove note frequently.",
-
 	"setting_help_doc_main_title": "Manual",
 	"setting_help_doc_main_go_detail": "Read manual in detail - ",
 	"setting_help_doc_name": "Open Manual",
-
 	"warn_sync_freq_need_int": "Sync frequency need to be an integer",
 	"warn_sync_freq_range": "Auto sync frequency allowed: {{min}}~{{max}}",
-
 	"err_chkPublished_failed": "Failed to check note publish status",
 	"err_chkPublished_with_msg": "Note publish status check with error: {{msg}}",
-
 	"err_attachConf_failed": "Failed to get note attachment config",
 	"err_attachConf_with_msg": "Get note attachment config with error: {{msg}}",
-
 	"err_chkAttach_failed": "Failed to check attachment status",
 	"err_chkAttach_with_msg": "Attachment status check with error: {{msg}}",
-
 	"sucs_publish": "Note {{{docName}}} publish success",
 	"err_publish_failed": "Note {{{docName}}} publish failed",
 	"err_publish_with_msg": "Note {{{docName}}} publish with error: {{msg}}",
-
 	"sucs_rename": "Note {{{docName}}} rename success",
 	"err_rename_failed": "Note {{{docName}}} rename failed",
 	"err_rename_with_msg": "Note {{{docName}}} rename with error: {{msg}}",
-
 	"sucs_remove": "Note {{{docName}}} remove success",
 	"err_remove_failed": "Note {{{docName}}} remove failed",
 	"err_remove_with_msg": "Note {{{docName}}} remove with error: {{msg}}",
-
 	"err_no_attach_conf": "Server: platform has no attach config.",
 	"err_doc_attach_ref_invalid": "Attachment reference {{msg}} to an invalid resource path, unable to continue publish",
 	"err_attach_no_ext": "Attachment reference  {{msg}} has no extension which is required",
 	"err_attach_no_support": "Attachment file type unsupported: {{{filename}}} ",
 	"err_attach_oversize_skipped": "Attachment oversize: {{{filename}}}, skipped",
-
 	"manual_title": "You can find manual and docs below.",
 	"manual_link_text": "Visit YiDong Platform Home Page",
-
+	"plugin_expired": "Plugin expired!",
+	"plugin_not_available": "Plugin unavailable please check remote service status",
+	"plugin_not_purchase": "Remote service not purchase or expired.",
 	"plugin_lifetime_title": "Plugin Available Until",
 	"plugin_lifetime_fmt_day": "YYYY MM DD",
 	"plugin_lifetime_fmt_sec": "YYYY MM DD HH:mm:ss",
 	"plugin_get_started": "To get started fill in the settings below and restart Obsidian.",
 	"plugin_lifetime": "Available for {{{remainingInDays}}} days. Expires at {{{expireTimeStr}}}.",
-
-	"plugin_expired": "Plugin expired!",
-	"plugin_not_available": "Plugin unavailable please check remote service status.",
-	"plugin_not_purchase": "Remote service not purchase or expired.",
-
+	"plugin_lifetime_less_than_1day": "有效期剩余不到1天，将于 {{{expireTimeStr}}} 到期!",
 	"req_err_expired": "Request failed, service not purchased or expired.",
 	"req_err_common": "Request failed"
 }
