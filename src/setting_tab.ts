@@ -32,7 +32,7 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 			helpText: this.t("manual_title"),
 			helpLink: "https://saas.ydc.pub/docs/saas_manual_ob",
 			homeText: this.t("manual_link_text"),
-			homeUrl: "https://net.ydc.show",
+			homeUrl: "https://saas.ydc.show",
 		};
 	}
 
@@ -52,8 +52,7 @@ export default class YdcDocSettingTab extends PluginSettingTab {
 
 		mainDoc.createEl("div", undefined, (div) => {
 			div.createEl("h3", { text: this.t("setting_main_title") });
-			div.createEl("hr");
-			div.createEl("h3", { text: this.t("platform_name") });
+			// div.createEl("h3", { text: this.t("platform_name") });
 		});
 
 		if (this.isSaaSMode()) {
